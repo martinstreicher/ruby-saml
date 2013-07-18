@@ -35,7 +35,7 @@ module Onelogin::Saml
 		def generate
 			meta_doc = REXML::Document.new
 			root = meta_doc.add_element "EntityDescriptor", {
-					"xmlns:md" => "urn:oasis:names:tc:SAML:2.0:metadata"
+					"xmlns" => "urn:oasis:names:tc:SAML:2.0:metadata"
 			}
 			sp_sso = root.add_element "SPSSODescriptor", {
 					"protocolSupportEnumeration" => "urn:oasis:names:tc:SAML:2.0:protocol"
