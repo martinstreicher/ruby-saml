@@ -49,6 +49,7 @@ module Onelogin::Saml
 			end
 			if @settings.assertion_consumer_service_url != nil
 				sp_sso.add_element "AssertionConsumerService", {
+						"index" => "1"
 						# Add this as a setting to create different bindings?
 						"Binding" => @settings.assertion_consumer_service_binding,
 						"Location" => @settings.assertion_consumer_service_url
